@@ -1,0 +1,39 @@
+{
+  "name": "bare-electron-react",
+  "productName": "BareElectronReact",
+  "version": "0.0.0",
+  "description": "Bare project for electron and react",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "ragingwind/bare-electron-react",
+  "author": {
+    "name": "ragingwind",
+    "email": "ragingwind@gmail.com",
+    "url": "ragingwind.me"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "clean": "rm -rf build; mkdir -p build",
+    "build": "electron-packager . $npm_package_productName --prune --asar --ignore=node_modules/electron-prebuilt --ignore=node_modules/electron-packager --ignore=.git"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app"
+  ],
+  "devDependencies": {
+    "electron-packager": "^3.3.0",
+    "electron-prebuilt": "^0.25.2"
+  },
+  "dependencies": {
+    "electron-debug": "^0.1.1",
+    "node-jsx": "^0.13.3",
+    "react": "^0.13.3"
+  }
+}
