@@ -1,9 +1,9 @@
 # bare-electron-react
 
-> Bare project for electron and react
+> Bare project for electron with react
 
 
-## Dev
+## Install dependencies
 
 ```
 $ npm install
@@ -21,7 +21,8 @@ $ npm start
 $ npm run build
 ```
 
+## Structure of the project
 
 ## License
 
-MIT © [ragingwind](http://ragingwind.me)
+MIT © [Jimmy Moon](http://ragingwind.me)

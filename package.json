@@ -1,8 +1,8 @@
 {
   "name": "bare-electron-react",
-  "productName": "BareElectronReact",
+  "productName": "Electron with React",
   "version": "0.0.0",
-  "description": "Bare project for electron and react",
+  "description": "Electron with React",
   "license": "MIT",
   "main": "index.js",
   "repository": "ragingwind/bare-electron-react",
@@ -12,12 +12,19 @@
     "url": "ragingwind.me"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.12.0"
+  },
+  "build": {
+    "version": "0.29.1",
+    "target": "./build"
   },
   "scripts": {
     "start": "electron .",
-    "clean": "rm -rf build; mkdir -p build",
-    "build": "electron-packager . $npm_package_productName --prune --asar --ignore=node_modules/electron-prebuilt --ignore=node_modules/electron-packager --ignore=.git"
+    "clean": "rm -rf $npm_package_build_target",
+    "build": "if [ -z $PLATFORM ]; then PLATFORM=all; fi; if [ -z $ARCH ]; then ARCH=all; fi; electron-packager . $npm_package_productName --out=$npm_package_build_target --platform=$PLATFORM --arch=$ARCH --prune --asar --version=$npm_package_build_version",
+    "build:darwin": "PLATFORM=darwin ARCH=x64 npm run packager",
+    "build:win32": "PLATFORM=win32 ARCH=all npm run packager",
+    "build:linux": "PLATFORM=linux ARCH=all npm run packager"
   },
   "files": [
     "index.js",
@@ -28,12 +35,12 @@
     "electron-app"
   ],
   "devDependencies": {
-    "electron-packager": "^3.3.0",
-    "electron-prebuilt": "^0.25.2"
+    "electron-packager": "5.0.0",
+    "electron-prebuilt": "^0.29.1"
   },
   "dependencies": {
+    "babel": "^5.8.5",
     "electron-debug": "^0.1.1",
-    "node-jsx": "^0.13.3",
     "react": "^0.13.3"
   }
 }
