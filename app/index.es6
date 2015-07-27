@@ -1,12 +1,7 @@
 'use strict';
-const app = require('app');
-const BrowserWindow = require('browser-window');
 
-// report crashes to the Electron project
-require('crash-reporter').start();
-
-// enable inspect window
-require('electron-debug')();
+import app from 'app';
+import BrowserWindow from 'browser-window';
 
 // prevent window being GC'd
 let mainWindow = null;
