@@ -16,7 +16,7 @@
   },
   "config": {},
   "scripts": {
-    "copy": "cpy './**/*.*' ../debug --parents --cwd=app --ignore='./**/*.jsx,./**/*.es6'",
+    "copy": "cpy './**/*.*' '!./**/*.jsx' '!./**/*.es6' ../debug --parents --cwd=app",
     "babel": "babel app -d debug",
     "app": "mkdir -p debug; npm run babel; npm run copy; electron ./debug",
     "clean": "rm -rf $npm_package_configs_build debug",
@@ -31,7 +31,7 @@
     "electron-app"
   ],
   "devDependencies": {
-    "cpy": "git://github.com/ragingwind/cpy",
+    "cpy": "^3.4.0",
     "electron-packager": "5.0.0",
     "electron-prebuilt": "^0.29.1"
   },
