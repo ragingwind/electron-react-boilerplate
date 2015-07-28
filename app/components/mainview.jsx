@@ -2,12 +2,12 @@
 
 import React from 'react';
 
-var Main = React.createClass({
+var MainView = React.createClass({
   render: function() {
     return <div><h1>Alo, Alo!</h1></div>;
   }
 });
 
-React.render(<Main/>,
+React.render(<MainView/>,
   document.getElementById('container')
 );
