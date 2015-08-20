@@ -19,7 +19,7 @@ app.on('ready', function () {
 		resizable: false
 	});
 
-	mainWindow.loadUrl(`file://${__dirname}/index.html`);
+	mainWindow.loadUrl(`file://${__dirname}/build/index.html`);
 
 	mainWindow.on('closed', function () {
 		// deref the window

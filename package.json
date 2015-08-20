@@ -21,7 +21,7 @@
     "build": "mkdir -p build; npm run babel; npm run copy",
     "app": "npm run build; electron ./build",
     "clean": "rm -rf build package",
-    "package": "if [ -z $PLATFORM ]; then PLATFORM=all; fi; if [ -z $ARCH ]; then ARCH=all; fi; electron-packager ./build $npm_package_productName --out=./package --platform=$PLATFORM --arch=$ARCH --prune --asar --version=0.29.1"
+    "package": "if [ -z $PLATFORM ]; then PLATFORM=all; fi; if [ -z $ARCH ]; then ARCH=all; fi; electron-packager . $npm_package_productName --out=./package --platform=$PLATFORM --arch=$ARCH --prune --asar --version=0.29.1"
   },
   "files": [
     "index.js",
