@@ -30,18 +30,18 @@ $ npm run build
 You need to announce the name of the platform to package and arch also, if You want to build specific platform. If you don't announce the name of the platform? All of platforms and architectures are going to package
 
 ```
-$ PLATFORM=[darwin|linux|win32|all] ARCH=[all|x64] npm run build
+$ PLATFORM=[darwin|linux|win32|all] ARCH=[all|x64] npm run package
 ```
 
 ## Structure of the project
 
 ```
-app
-├── components
-│   └── mainview.jsx
-├── index.css
-├── index.es6
-└── index.html
+├── index.js
+├── app
+    ├── components
+    │   └── mainview.jsx
+    ├── index.css
+    └── index.html
 ```
 
 ## License
