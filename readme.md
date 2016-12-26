@@ -11,7 +11,7 @@ $ npm install
 
 ### Running application
 
-To run the electron application, This project need to build the source files before running it. `app` task will run `build` script to build the application at `build` directory and then the electron application will be running with the compiled files of the source on `build` directory.
+To run the electron application, This project will be built before running it with `npm run app`. The `app` task will be running `build` command before to `build` directory and then the electron application will be running with the compiled files of the source on `build` directory.
 
 ```
 $ npm run app
